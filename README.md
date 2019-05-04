@@ -4,20 +4,20 @@
 
 ## How to use ?
 **Step 1.** Add the JitPack repository to your build file
-```
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+```xml
+<repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+</repositories>
 ```
 
 **Step 2.** Add the dependency
-```
-	<dependency>
-	    <groupId>com.jadendong</groupId>
-	    <artifactId>util</artifactId>
-	    <version>Tag</version>
-	</dependency>
+```xml
+<dependency>
+    <groupId>com.jadendong</groupId>
+    <artifactId>util</artifactId>
+    <version>Tag</version>
+</dependency>
 ```
