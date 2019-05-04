@@ -6,17 +6,6 @@ package com.jadendong.util.convert;
  */
 public class HexUtil {
 
-    private static byte charToByte(char c) {
-        return (byte) "0123456789ABCDEF".indexOf(c);
-    }
-
-    /**
-     * 10进制转16进制 个位前面补0
-     */
-    private static String toHexString(int i) {
-        return Integer.toHexString(i).length() == 1 ? ("0" + Integer.toHexString(i)) : Integer.toHexString(i);
-    }
-
     /**
      * 16进制字符串转换成 byte[]
      */
@@ -30,13 +19,14 @@ public class HexUtil {
         byte[] d = new byte[length];
         for (int i = 0; i < length; i++) {
             int pos = i * 2;
-            d[i] = (byte) (charToByte(hexChars[pos]) << 4 | charToByte(hexChars[pos + 1]));
+            d[i] = (byte) (ByteUtil.charToByte(hexChars[pos]) << 4 | ByteUtil.charToByte(hexChars[pos + 1]));
         }
         return d;
     }
 
     /**
-     * byte[]转换成16进制字符串
+     * byte[] 转换成16进制字符串
+     * 默认全部大写输出
      */
     public static String byteToHexString(byte[] src) {
         StringBuilder stringBuilder = new StringBuilder("");
@@ -45,12 +35,12 @@ public class HexUtil {
         }
         for (byte aSrc : src) {
             int v = aSrc & 0xFF;
-            String hv = toHexString(v);
+            String hv = Integer.toHexString(v).length() == 1 ? ("0" + Integer.toHexString(v)) : Integer.toHexString(v);
             if (hv.length() < 2) {
                 stringBuilder.append(0);
             }
             stringBuilder.append(hv);
         }
-        return stringBuilder.toString();
+        return stringBuilder.toString().toUpperCase();
     }
 }
