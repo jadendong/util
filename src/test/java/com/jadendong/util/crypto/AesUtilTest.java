@@ -5,7 +5,7 @@ import org.junit.Test;
 
 
 public class AesUtilTest {
-    private static byte[] bytes = new byte[]{1, 2, 3, 4, 5, 0x0A};
+    private static byte[] bytes = new byte[]{1, 2, 3, 4, 5, 0x0A, 1, 2, 3, 4, 5, 0x0A, 1, 2, 3, 4};
     private static byte[] key = new byte[]{0, 0x0B, 0x0C, 0x0E, 0x0F, 0x0A, 0, 0x0B, 0, 0x0B, 0x0C, 0x0E, 0x0F, 0x0A, 0, 0x0B};
 
     @Test

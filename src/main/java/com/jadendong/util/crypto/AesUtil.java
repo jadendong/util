@@ -9,7 +9,7 @@ import javax.crypto.spec.SecretKeySpec;
 public class AesUtil {
 
     /**
-     * @param content    待加密的内容
+     * @param content    待加密的内容 (长度要是16字节的倍数)
      * @param encryptKey 加密密钥
      * @return 加密后的 byte[]
      */
@@ -31,8 +31,8 @@ public class AesUtil {
     /**
      * AES解密
      *
-     * @param content 待解密的byte[]
-     * @param decryptKey   解密密钥
+     * @param content    待解密的byte[]
+     * @param decryptKey 解密密钥
      * @return 解密后的String
      */
     public static byte[] aesDecrypt(byte[] content, byte[] decryptKey) {
