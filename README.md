@@ -3,7 +3,9 @@
 [![](https://jitpack.io/v/com.jadendong/util.svg)](https://jitpack.io/#com.jadendong/util)
 
 ## How to use ?
+
 **Step 1.** Add the JitPack repository to your build file
+
 ```xml
 <repositories>
     <repository>
@@ -14,6 +16,7 @@
 ```
 
 **Step 2.** Add the dependency
+
 ```xml
 <dependency>
     <groupId>com.jadendong</groupId>
